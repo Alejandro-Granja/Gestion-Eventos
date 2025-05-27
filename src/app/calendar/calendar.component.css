@@ -1,0 +1,93 @@
+/* estilos-calendar.css */
+
+/* Fondo general del calendario */
+.fc {
+  background: linear-gradient(145deg, #ffffff, #f2f2f2);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+/* Barra superior */
+.fc-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.fc-toolbar-title {
+  font-size: 2rem;
+  color: #111;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.fc-button {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 14px;
+  margin: 0 4px;
+  font-weight: 600;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.fc-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+}
+
+/* Celdas de los días */
+.fc-daygrid-day {
+  background-color: #fdfdfd;
+  transition: background-color 0.2s ease;
+  border-radius: 8px;
+}
+
+.fc-daygrid-day:hover {
+  background-color: #e9f5ff;
+}
+
+/* Día actual */
+.fc-day-today {
+  background-color: #ccf2ff !important;
+  border: 2px solid #00aaff;
+  border-radius: 8px;
+}
+
+/* Eventos */
+.fc-event {
+  background: linear-gradient(to right, #ff416c, #ff4b2b) !important;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Día sin eventos */
+.fc-daygrid-day-frame {
+  padding: 0.3rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .fc-toolbar-title {
+    font-size: 1.5rem;
+  }
+
+  .fc-button {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+}
